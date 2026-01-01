@@ -14,8 +14,8 @@ public class CobaController {
 	CobaService cobaService;
 	
 	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World!")String name) {
-		return String.format("Hello %s, just changed to %s", name, cobaService.changeNameToBudi());
+	public String hello(@RequestParam(value = "username", defaultValue = "World!")String username) {
+		return String.format("Hello World, username %s found in database", username, cobaService.changeNameToThisUsername(username));
 	}
 
 }
